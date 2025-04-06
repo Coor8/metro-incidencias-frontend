@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://metro-incidencias.onrender.com/api'; // URL del backend
+const API_URL = process.env.REACT_APP_API_URL || 'https://metro-incidencias.onrender.com/api';
 
 export const api = axios.create({
     baseURL: API_URL,
