@@ -1,0 +1,19 @@
+.charts-container {
+    padding: 2rem;
+    max-width: 95%;
+    margin: auto;
+    background: linear-gradient(to right, #4CAF50, #43A047);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.chart {
+    margin-bottom: 2rem;
+}
+
+.chart h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: white;
+}

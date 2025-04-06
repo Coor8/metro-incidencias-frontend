@@ -1,0 +1,107 @@
+.history-panel-container {
+    padding: 20px;
+    background-color: #d5f2d5; /* Fondo verde suave */
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: auto;
+}
+
+.history-panel-container h1 {
+    text-align: center;
+    color: #006400; /* Verde oscuro */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    border: 1px solid #006400;
+    border-radius: 10px;
+    outline: none;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #eaf9e7;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.history-table th {
+    background-color: #006400; 
+    color: white;
+    padding: 12px;
+    text-align: center; /* Centrar encabezados */
+    font-weight: bold;
+}
+
+.history-table td {
+    padding: 12px;
+    border-bottom: 1px solid #c8e6c9;
+    color: #1a3e1a;
+    font-weight: 500;
+    text-align: center; /* Centrar contenido de celdas */
+}
+
+.history-table tr:hover {
+    background-color: #c4e4c4;
+}
+
+.pagination-controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-controls button {
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    background-color: #2196F3;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.pagination-controls button.active {
+    background-color: orange;
+}
+
+.pagination-controls button:disabled {
+    background-color: #bfbfbf;
+    cursor: not-allowed;
+}
+
+.pagination-controls span {
+    margin: 0 0.3rem;
+}
+
+.search-and-clean-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.btn-limpiar {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-limpiar:hover {
+    background-color: #d32f2f;
+}
+

@@ -1,0 +1,28 @@
+.navbar {
+    background-color: #005e0d; /* verde línea 8 más oscuro */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  .navbar-logo {
+    height: 40px;
+  }
+  
+  .navbar-links a {
+    margin-left: 20px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #a0f5c8;
+  }
+  

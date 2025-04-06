@@ -1,0 +1,185 @@
+/* AdminPanel.css */
+
+.admin-panel-container {
+    background-color: #e0f7e0;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.admin-panel-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0c6e0c;
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+/* Formulario */
+.admin-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #c8e6c9;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.admin-form input, .admin-form select, .admin-form button {
+    padding: 12px;
+    margin: 0 5px;
+    border: 2px solid #0c6e0c;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: transform 0.2s;
+}
+
+.admin-form input:hover, .admin-form select:hover, .admin-form button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-form button {
+    background-color: #0c6e0c;
+    color: white;
+    cursor: pointer;
+}
+
+.admin-form button:hover {
+    background-color: #085a08;
+}
+
+/* Tabla de usuarios */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.admin-table th, .admin-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+    color: #085a08;
+}
+
+.admin-table th {
+    background-color: #0c6e0c;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.admin-table tr {
+    transition: background-color 0.2s;
+}
+
+.admin-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Botones de acción en la tabla */
+.admin-table td button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Suponemos que el primer botón es Editar y el segundo es Eliminar */
+.admin-table td button:first-of-type {
+    background-color: #ff9800; /* Naranja */
+}
+
+.admin-table td button:first-of-type:hover {
+    background-color: #fb8c00;
+    transform: scale(1.05);
+}
+
+.admin-table td button:last-of-type {
+    background-color: #f44336; /* Rojo */
+}
+
+.admin-table td button:last-of-type:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-form {
+        flex-direction: column;
+    }
+
+    .admin-form input, .admin-form select, .admin-form button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .admin-table th, .admin-table td {
+        font-size: 0.9rem;
+    }
+}
+
+.password-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 2px solid green;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: #c8e6c9;
+}
+
+.password-input-container input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 8px;
+    padding-right: 40px;
+    background: transparent;
+    color: green;
+    font-size: 14px;
+}
+
+.password-input-container input::placeholder {
+    color: darkgreen;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    outline: none !important;
+    color: darkorange; /* Color naranja permanente */
+    font-size: 1.2rem;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    display: grid;
+    place-items: center;
+}
+
+/* Eliminar cualquier efecto de focus o hover */
+.toggle-password:focus,
+.toggle-password:active,
+.toggle-password:hover {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+    color: darkorange; /* Mantiene mismo color en todos los estados */
+}

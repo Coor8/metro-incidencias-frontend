@@ -1,0 +1,174 @@
+/* Fuente global y ajustes base */
+body {
+  font-family: "Poppins', sans-serif";
+  background-color: #f5f5f5; /* Fondo página gris claro para contraste */
+  color: #333;              /* Texto en tono gris oscuro (legible sobre fondo claro) */
+  margin: 0;
+}
+
+/* Contenedor del formulario de inicio de sesión */
+.login-container {
+  max-width: 400px;             /* Ancho máximo para pantallas grandes */
+  margin: 10px auto;            /* Centrar contenedor (horizontal y separación vertical) */
+  padding: 2rem;               /* Espacio interno para separar el contenido de los bordes */
+  background-color: #FFF;      /* Fondo blanco para el formulario */
+  border-radius: 10px;          /* Bordes redondeados para apariencia suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
+  box-sizing: border-box;
+}
+
+/* (Opcional) Título del formulario */
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.login-left {
+  background: #009933; /* Verde Línea 8 */
+  color: white;
+  width: 60%;
+  padding: 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Contenedor de la contraseña */
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Input de contraseña */
+.password-container input {
+  width: 100%;
+  padding-right: 40px; /* Espacio para el icono */
+}
+
+/* Botón del ojo dentro del campo de contraseña */
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+}
+
+/* Estilos para las entradas de texto */
+.login-container input[type="text"],
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  width: 100%;                
+  padding: 0.75rem 1rem;      
+  margin-bottom: 1rem;        
+  border: 1px solid #ccc;     
+  border-radius: 6px;         
+  font-size: 1rem;
+  box-sizing: border-box;     
+  outline: none;              
+  background-color: #FFF;     
+  color: #333;
+}
+
+/* Placeholder (texto de ayuda dentro de los inputs) */
+.login-container input::placeholder {
+  color: #666; /* Color más oscuro para mejor visibilidad */
+}
+
+/* Efecto al enfocar las entradas */
+.login-container input:focus {
+  border-color: #009A44;      
+  box-shadow: 0 0 0 3px rgba(0, 154, 68, 0.2); 
+  outline: none;              
+}
+
+/* Botón de inicio de sesión */
+.login-container button[type="submit"],
+.login-container .login-button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;             
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFF;                
+  background-color: #009A44;  
+  border: none;               
+  border-radius: 6px;         
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);      
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Efectos al pasar el cursor o enfocar el botón */
+.login-container button:hover,
+.login-container button:focus {
+  background-color: #007B36;  
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);     
+  transform: translateY(-2px); 
+  outline: none;              
+}
+
+/* Estilo para enlaces dentro del formulario, e.g. "¿Olvidó su contraseña?" */
+.login-container a {
+  color: #009A44;
+  text-decoration: none;
+}
+.login-container a:hover {
+  text-decoration: underline;
+}
+
+/* Diseño responsivo: ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+  .login-container {
+    margin: 20px auto;        
+    padding: 1.5rem;          
+  }
+  .login-container h2 {
+    font-size: 1.25rem;       
+  }
+  .login-container input[type="text"],
+  .login-container input[type="email"],
+  .login-container input[type="password"],
+  .login-container button[type="submit"] {
+    font-size: 0.9rem;        
+  }
+}
+
+/* 🔥🔥🔥 Modo Oscuro */
+body.dark-mode .login-container {
+  background-color: #002400;  /* Fondo oscuro para el formulario */
+  color: #a7ff9d;             /* Texto verde claro */
+}
+
+body.dark-mode .login-container input,
+body.dark-mode .login-container input::placeholder {
+  color: #a7ff9d;
+  background-color: #003300; 
+  border-color: #66ff66;
+}
+
+body.dark-mode .login-container input:focus {
+  border-color: #66ff66;
+  box-shadow: 0 0 0 3px rgba(102, 255, 102, 0.2);
+}
+
+body.dark-mode .login-container button {
+  background-color: #004d00;
+  color: #a7ff9d;
+  border: 1px solid #a7ff9d;
+}
+
+body.dark-mode .login-container button:hover {
+  background-color: #006600;
+}
+
+body.dark-mode .toggle-password {
+  color: #ff9900; /* Color naranja para contraste */
+}

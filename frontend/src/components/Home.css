@@ -1,0 +1,37 @@
+.home-container {
+    background-color: #4caf50;
+    padding: 3rem;
+    border-radius: 16px;
+    max-width: 600px;
+    margin: 4rem auto;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .home-container h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .home-buttons a {
+    text-decoration: none;
+    background-color: #006400;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-buttons a:hover {
+    background-color: #004d00;
+  }
+  

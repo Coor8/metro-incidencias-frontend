@@ -1,0 +1,214 @@
+/* Estilos generales */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #4caf50, #2e7d32);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo Oscuro */
+body.dark-mode {
+  background: linear-gradient(to right, #002400, #004d00);
+  color: #a7ff9d;
+}
+
+/* Contenedor principal */
+.app-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+/* Barra de navegación */
+.navbar {
+  background: rgba(0, 99, 0, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .navbar {
+  background: rgba(0, 64, 0, 0.9);
+}
+
+/* Modo Oscuro - Switch */
+.mode-switch {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: lightgreen;
+  transition: color 0.3s;
+}
+
+body.dark-mode .mode-switch {
+  color: #66ff66;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 35px;
+  margin-right: 10px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .nav-links a {
+  color: #a7ff9d;
+}
+
+body.dark-mode .nav-links a:hover {
+  background: rgba(100, 255, 100, 0.2);
+}
+
+/* Estilos para los botones */
+.button {
+  background: #4caf50;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background: #388e3c;
+}
+
+body.dark-mode .button {
+  background: #004d00;
+  color: #a7ff9d;
+  border: 1px solid #a7ff9d;
+}
+
+body.dark-mode .button:hover {
+  background: #006600;
+}
+
+/* Contenedor del contenido */
+.content {
+  margin-top: 20px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+body.dark-mode .content {
+  background: rgba(0, 64, 0, 0.9);
+}
+
+/* Botón de cerrar sesión */
+.logout-button {
+  background-color: #fff;
+  color: #009933;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.logout-button:hover {
+  background-color: #009933;
+  color: white;
+  transform: scale(1.05);
+}
+
+body.dark-mode .logout-button {
+  background-color: #004d00;
+  color: #a7ff9d;
+}
+
+body.dark-mode .logout-button:hover {
+  background-color: #006600;
+}
+
+/* ---------- NUEVO: Menú responsive ---------- */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+body.dark-mode .menu-toggle {
+  color: #66ff66;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #006400;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 10px;
+    z-index: 999;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a,
+  .logout-button {
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+  }
+
+  body.dark-mode .nav-links {
+    background-color: #002400;
+  }
+}

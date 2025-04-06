@@ -1,0 +1,408 @@
+.incidents-container {
+  padding: 2rem;
+  max-width: 96%;
+  margin: auto;
+  background: linear-gradient(to right, #4CAF50, #43A047);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.incidents-table th,
+.incidents-table td {
+  vertical-align: middle;
+  padding: 12px 12px;
+}
+
+.incidents-table th:nth-child(1),
+.incidents-table td:nth-child(1) {
+  width: 8%;
+  text-align: center;
+}
+
+.incidents-table th:nth-child(3),
+.incidents-table td:nth-child(3) {
+  width: 7%;
+  text-align: center;
+}
+
+.incidents-table th:nth-child(5),
+.incidents-table td:nth-child(5) {
+  width: 14%;
+  text-align: center;
+}
+
+.incidents-table th:nth-child(6),
+.incidents-table td:nth-child(6) {
+  width: 8%;
+  text-align: center;
+}
+
+.incidents-table th:nth-child(7),
+.incidents-table td:nth-child(7) {
+  width: 15%;
+  text-align: center;
+}
+
+.incidents-table th:nth-child(2),
+.incidents-table td:nth-child(2) {
+  width: 6%;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.incidents-table td:nth-child(4),
+.incidents-table td:nth-child(6) {
+  max-width: none;
+  white-space: normal;
+  text-overflow: clip;
+}
+
+.incidents-table th:nth-child(4),
+.incidents-table th:nth-child(6) {
+  min-width: 180px;
+}
+
+.incidents-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.incidents-header h2 {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.btn-nueva {
+  background-color: #009933;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-nueva:hover {
+  background-color: #007722;
+}
+
+.incidents-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  table-layout: fixed;
+}
+
+.incidents-table th {
+  background-color: #009933;
+  color: white;
+  font-weight: bold;
+}
+
+.incidents-table td {
+  border-bottom: 1px solid #ddd;
+  font-size: 0.95rem;
+  color: #333;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.animate-click {
+  transition: transform 0.1s ease-in-out;
+}
+
+.animate-click:active {
+  transform: scale(0.95);
+}
+
+.clickable-description {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.clickable-description:hover {
+  background-color: #f8f8f8;
+}
+
+.clickable-description::after {
+  content: "...";
+  position: absolute;
+  right: 5px;
+  bottom: 2px;
+  background: linear-gradient(to right, transparent, white 50%);
+  padding-left: 10px;
+}
+
+.estado {
+  padding: 0.3rem 0.7rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.estado.pendiente {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.estado.revision {
+  background-color: #f1c40f;
+  color: #222;
+}
+
+.estado.resuelto {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.icono-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 0 5px;
+  transition: transform 0.2s ease;
+}
+
+.icono-btn:hover {
+  transform: scale(1.2);
+}
+
+.icono-editar {
+  color: #f39c12;
+}
+
+.icono-eliminar {
+  color: #e74c3c;
+}
+
+.filtros-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos unificados para todos los elementos del filtro */
+.filtros-container select,
+.filtros-container input[type="date"],
+.filtros-container button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.88rem;
+  border-radius: 6px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  color: #333;
+  height: 36px;
+  min-width: 160px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+
+/* Estilo específico para inputs de fecha */
+.filtros-container input[type="date"] {
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M20 11H4M20 11V6.2C20 5.07989 20 4.51984 19.782 4.09202C19.5903 3.71569 19.2843 3.40973 18.908 3.21799C18.4802 3 17.9201 3 16.8 3H7.2C6.07989 3 5.51984 3 5.09202 3.21799C4.71569 3.40973 4.40973 3.71569 4.21799 4.09202C4 4.51984 4 5.0799 4 6.2V17.8C4 18.9201 4 19.4802 4.21799 19.908C4.40973 20.2843 4.71569 20.5903 5.09202 20.782C5.51984 21 6.07989 21 7.2 21H16.8C17.9201 21 18.4802 21 18.908 20.782C19.2843 20.5903 19.5903 20.2843 19.782 19.908C20 19.4802 20 18.9201 20 17.8V11Z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 20px;
+  padding-right: 2rem;
+}
+
+.filtros-container input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.filtros-container select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M6 9l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 16px;
+  padding-right: 1.8rem;
+  -webkit-appearance: none;
+}
+
+.filtros-container button {
+  background-color: #e74c3c;
+  color: white;
+  min-width: 120px;
+}
+
+.filtros-container button:hover {
+  background-color: #c0392b;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+.search-bar .search-icon {
+  margin-left: 0.5rem;
+  color: #009933;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.pagination-controls button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pagination-controls button:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.pagination-controls button.active {
+  background-color: #ff9800;
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+}
+
+.pagination-controls button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 999;
+}
+
+.description-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
+  z-index: 1000;
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+}
+
+.modal-header h3 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-header h3::before {
+  content: "📋";
+  font-size: 1.2em;
+}
+
+.btn-cerrar {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s ease;
+  line-height: 1;
+}
+
+.btn-cerrar:hover {
+  color: #333;
+}
+
+.modal-content {
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 1rem;
+  color: #34495e;
+  padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .filtros-container {
+    flex-direction: column;
+  }
+  
+  .filtros-container select,
+  .filtros-container input[type="date"],
+  .filtros-container button {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .incidents-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .incidents-table td {
+    font-size: 0.85rem;
+  }
+}

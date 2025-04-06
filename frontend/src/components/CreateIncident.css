@@ -1,0 +1,76 @@
+/* Contenedor principal */
+.incident-form-container {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Título */
+.incident-form-container h2 {
+  margin-bottom: 1.5rem;
+  color: #009a44;
+  font-size: 1.5rem;
+}
+
+/* Formulario */
+.incident-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Inputs y select */
+.incident-form input,
+.incident-form select {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border 0.3s;
+}
+
+/* Textarea */
+.incident-form textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif; /* o la fuente global que estés usando */
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border 0.3s;
+  resize: none; /* ✅ Evita que el usuario cambie el tamaño */
+  height: 150px; /* Altura predeterminada */
+}
+
+/* Efecto focus */
+.incident-form input:focus,
+.incident-form select:focus,
+.incident-form textarea:focus {
+  border-color: #009a44;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 154, 68, 0.2);
+}
+
+/* Botón */
+.btn-submit {
+  background-color: #009a44;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #007b36;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
